@@ -168,6 +168,22 @@ $('.jsResetSection').on('click', function () {
 
 (function () {
     /**
+     * Simon
+     */
+    var $checkbox = $('#simonVowel'),
+        $strikeButtons = $('#sectionSimon input[name="simonStrikes"]');
+
+    $('#sectionSimon input').on('change', function () {
+        var hasVowel = $checkbox.prop('checked'),
+            strikes = $strikeButtons.filter(':checked').val();
+
+        // Do something with arrows and stuff!
+        console.log({vowel: hasVowel, strikes: strikes});
+    });
+})();
+
+(function () {
+    /**
      * Memory
      */
     var inputRegex = /^[1-4]$/,
