@@ -22,28 +22,36 @@ button {
     border-width: 1px;
 }
 
-.buttonRed, .buttonYellow, .buttonBlue, .buttonWhite, .buttonBlack {
-    color: black;
+.button {
     padding: 0.2em;
 }
-.buttonRed {
+.red {
     background-color: red;
     color: white;
 }
-.buttonYellow {
+.yellow {
     background-color: yellow;
+    color: black;
 }
-.buttonBlue {
+.blue {
     background-color: blue;
     color: white;
 }
-.buttonWhite {
+.green {
+    background-color: green;
+    color: white;
+}
+.white {
     background-color: white;
     border-color: black;
+    color: black;
 }
-.buttonBlack {
+.black {
     background-color: black;
     color: white;
+}
+.button.white {
+    border: 1px solid black;
 }
 
 .active {
@@ -106,6 +114,34 @@ h2 {
 #sectionButton .buttonWhite {
     border-style: solid;
     border-width: 1px;
+}
+
+#simonInputs {
+    float: left;
+    margin-right: 5em;
+}
+#simonBoard {
+    display: inline-block;
+    padding-bottom: 40px; /* Compensate for height increase as a result of rotation */
+    transform: rotate(45deg);
+}
+#simonBoard > div > div {
+    border: 2px solid black;
+    display: inline-block;
+    height: 64px;
+    width: 64px;
+}
+#simonBoard > div:first-child > div {
+    border-top-width: 4px;
+}
+#simonBoard > div:last-child > div {
+    border-bottom-width: 4px;
+}
+#simonBoard > div > div:first-child {
+    border-left-width: 4px;
+}
+#simonBoard > div > div:last-child {
+    border-right-width: 4px;
 }
 
 #sectionDisplay {

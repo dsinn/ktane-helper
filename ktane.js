@@ -350,8 +350,8 @@ $('.jsResetSection').on('click', function () {
     $('#sequenceOptions button').on('click', function () {
         var colour = this.getAttribute('data-colour'),
                 letter = this.getAttribute('data-letter'),
-                $li = $('<li><button class="button' + colour.charAt(0).toUpperCase() + colour.substring(1)
-                        + '" data-colour="' + colour + '" data-letter="' + letter + '">' + letter + '</button></li>');
+                $li = $('<li><button class="button ' + colour + '" data-colour="' + colour + '" data-letter="' + letter
+                        + '">' + letter + '</button></li>');
 
         if (typeof occurrences[colour][count[colour]] !== 'undefined') {
             $li.append(occurrences[colour][count[colour]].indexOf(letter) === -1 ? 'Ignore' : 'Cut');
