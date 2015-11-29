@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Keep Talking and Nobody Explodes</title>
+        <link rel="stylesheet" type="text/css" href="ktane.css" />
+    </head>
+
+    <body>
+        <h1>Keep Talking and Nobody Explodes</h1>
+
+        <section id="sectionWires">
+            <h2>Wires</h2>
+
+            <ul id="wireOptions">
+                <li><button class="buttonRed" data-colour="red"></button></li>
+                <li><button class="buttonYellow" data-colour="yellow"></button></li>
+                <li><button class="buttonBlue" data-colour="blue"></button></li>
+                <li><button class="buttonWhite" data-colour="white"></button></li>
+                <li><button class="buttonBlack" data-colour="black"></button></li>
+            </ul>
+
+            <ul id="wireList"></ul>
+        </section>
+
+        <section id="sectionButton">
+            <h2>Button</h2>
+            <div>
+                Colour:
+                <input type="radio" name="buttonColour" value="blue" id="buttonColourBlue" checked /> <label for="buttonColourBlue" class="buttonBlue">Blue</label>
+                <input type="radio" name="buttonColour" value="white" id="buttonColourWhite" /> <label for="buttonColourWhite" class="buttonWhite">White</label>
+                <input type="radio" name="buttonColour" value="yellow" id="buttonColourYellow" /> <label for="buttonColourYellow" class="buttonYellow">Yellow</label>
+                <input type="radio" name="buttonColour" value="red" id="buttonColourRed" /> <label for="buttonColourRed" class="buttonRed">Red</label>
+            </div>
+            <div>
+                Text:
+                <input type="radio" name="buttonText" value="Abort" id="buttonTextAbort" checked /> <label for="buttonTextAbort">Abort</label>
+                <input type="radio" name="buttonText" value="Detonate" id="buttonTextDetonate" /> <label for="buttonTextDetonate">Detonate</label>
+                <input type="radio" name="buttonText" value="Hold" id="buttonTextHold" /> <label for="buttonTextHold">Hold</label>
+                <input type="radio" name="buttonText" value="Press" id="buttonTextPress" /> <label for="buttonTextPress">Press</label>
+            </div>
+            <div id="buttonInstruction"></div>
+            <div>
+                If holding the button and the strip colour is
+                <ul>
+                    <li><span class="buttonBlue">Blue</span>: release when timer has a <strong>4</strong> in any position.</li>
+                    <li><span class="buttonYellow">Yellow</span>: release when timer has a <strong>5</strong> in any position.</li>
+                    <li>Other: release when timer has a <strong>1</strong> in any position.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sectionDisplay">
+            <h2>Display</h2>
+
+            <dl id="displayList">
+                <dt>&nbsp;</dt>     <dd>bottom-left</dd>
+                <dt>BLANK</dt>      <dd>middle-right</dd>
+                <dt>C</dt>          <dd>top-right</dd>
+                <dt>CEE</dt>        <dd>bottom-right</dd>
+                <dt>DISPLAY</dt>    <dd>bottom-right</dd>
+                <dt>FIRST</dt>      <dd>top-right</dd>
+                <dt>HOLD ON</dt>    <dd>bottom-right</dd>
+                <dt>LEAD</dt>       <dd>bottom-right</dd>
+                <dt>LED</dt>        <dd>middle-left</dd>
+                <dt>LEED</dt>       <dd>bottom-left</dd>
+                <dt>NO</dt>         <dd>bottom-right</dd>
+                <dt>NOTHING</dt>    <dd>middle-left</dd>
+                <dt>OKAY</dt>       <dd>top-right</dd>
+                <dt>READ</dt>       <dd>middle-right</dd>
+                <dt>RED</dt>        <dd>middle-right</dd>
+                <dt>REED</dt>       <dd>bottom-left</dd>
+                <dt>SAYS</dt>       <dd>bottom-right</dd>
+                <dt>SEE</dt>        <dd>bottom-right</dd>
+                <dt>U</dt>          <dd>top-left</dd>
+                <dt>UR</dt>         <dd>top-left</dd>
+                <dt>THEIR</dt>      <dd>middle-right</dd>
+                <dt>THERE</dt>      <dd>bottom-right</dd>
+                <dt>THEY ARE</dt>   <dd>middle-left</dd>
+                <dt>THEY'RE</dt>    <dd>bottom-left</dd>
+                <dt>YES</dt>        <dd>middle-left</dd>
+                <dt>YOU</dt>        <dd>middle-right</dd>
+                <dt>YOU ARE</dt>    <dd>bottom-right</dd>
+                <dt>YOUR</dt>       <dd>middle-right</dd>
+                <dt>YOU'RE</dt>     <dd>middle-right</dd>
+            </dl>
+
+            <table id="displayTable">
+                <tr>
+                    <th>"BLANK":</th>
+                    <td>WAIT, RIGHT, OKAY, MIDDLE, BLANK</td>
+                </tr>
+                <tr>
+                    <th>"DONE":</th>
+                    <td>SURE, UH HUH, NEXT, WHAT?, YOUR, UR, YOU'RE, HOLD, LIKE, YOU, U, YOU ARE, UH UH, DONE</td>
+                </tr>
+                <tr>
+                    <th>"FIRST":</th>
+                    <td>LEFT, OKAY, YES, MIDDLE, NO, RIGHT, NOTHING, UHHH, WAIT, READY, BLANK, WHAT, PRESS, FIRST</td>
+                </tr>
+                <tr>
+                    <th>"HOLD":</th>
+                    <td>YOU ARE, U, DONE, UH UH, YOU, UR, SURE, WHAT?, YOU'RE, NEXT, HOLD</td>
+                </tr>
+                <tr>
+                    <th>"LEFT":</th>
+                    <td>RIGHT, LEFT</td>
+                </tr>
+                <tr>
+                    <th>"LIKE":</th>
+                    <td>YOU'RE, NEXT, U, UR, HOLD, DONE, UH UH, WHAT?, UH HUH, YOU, LIKE</td>
+                </tr>
+                <tr>
+                    <th>"MIDDLE":</th>
+                    <td>BLANK, READY, OKAY, WHAT, NOTHING, PRESS, NO, WAIT, LEFT, MIDDLE</td>
+                </tr>
+                <tr>
+                    <th>"NEXT":</th>
+                    <td>WHAT?, UH HUH, UH UH, YOUR, HOLD, SURE, NEXT</td>
+                </tr>
+                <tr>
+                    <th>"NO":</th>
+                    <td>BLANK, UHHH, WAIT, FIRST, WHAT, READY, RIGHT, YES, NOTHING, LEFT, PRESS, OKAY, NO</td>
+                </tr>
+                <tr>
+                    <th>"NOTHING":</th>
+                    <td>UHHH, RIGHT, OKAY, MIDDLE, YES, BLANK, NO, PRESS, LEFT, WHAT, WAIT, FIRST, NOTHING</td>
+                </tr>
+                <tr>
+                    <th>"OKAY":</th>
+                    <td>MIDDLE, NO, FIRST, YES, UHHH, NOTHING, WAIT, OKAY</td>
+                </tr>
+                <tr>
+                    <th>"PRESS":</th>
+                    <td>RIGHT, MIDDLE, YES, READY, PRESS</td>
+                </tr>
+                <tr>
+                    <th>"READY":</th>
+                    <td>YES, OKAY, WHAT, MIDDLE, LEFT, PRESS, RIGHT, BLANK, READY</td>
+                </tr>
+                <tr>
+                    <th>"RIGHT":</th>
+                    <td>YES, NOTHING, READY, PRESS, NO, WAIT, WHAT, RIGHT</td>
+                </tr>
+                <tr>
+                    <th>"SURE":</th>
+                    <td>YOU ARE, DONE, LIKE, YOU'RE, YOU, HOLD, UH HUH, UR, SURE</td>
+                </tr>
+                <tr>
+                    <th>"U":</th>
+                    <td>UH HUH, SURE, NEXT, WHAT?, YOU'RE, UR, UH UH, DONE, U</td>
+                </tr>
+                <tr>
+                    <th>"UH HUH":</th>
+                    <td>UH HUH</td>
+                </tr>
+                <tr>
+                    <th>"UH UH":</th>
+                    <td>UR, U, YOU ARE, YOU'RE, NEXT, UH UH</td>
+                </tr>
+                <tr>
+                    <th>"UHHH":</th>
+                    <td>READY, NOTHING, LEFT, WHAT, OKAY, YES, RIGHT, NO, PRESS, BLANK, UHHH</td>
+                </tr>
+                <tr>
+                    <th>"UR":</th>
+                    <td>DONE, U, UR</td>
+                </tr>
+                <tr>
+                    <th>"WAIT":</th>
+                    <td>UHHH, NO, BLANK, OKAY, YES, LEFT, FIRST, PRESS, WHAT, WAIT</td>
+                </tr>
+                <tr>
+                    <th>"WHAT":</th>
+                    <td>UHHH, WHAT</td>
+                </tr>
+                <tr>
+                    <th>"WHAT?":</th>
+                    <td>YOU, HOLD, YOU'RE, YOUR, U, DONE, UH UH, LIKE, YOU ARE, UH HUH, UR, NEXT, WHAT?</td>
+                </tr>
+                <tr>
+                    <th>"YES":</th>
+                    <td>OKAY, RIGHT, UHHH, MIDDLE, FIRST, WHAT, PRESS, READY, NOTHING, YES</td>
+                </tr>
+                <tr>
+                    <th>"YOU ARE":</th>
+                    <td>YOUR, NEXT, LIKE, UH HUH, WHAT?, DONE, UH UH, HOLD, YOU, U, YOU'RE, SURE, UR</td>
+                </tr>
+                <tr>
+                    <th>"YOU":</th>
+                    <td>SURE, YOU ARE, YOUR, YOU'RE, NEXT, UH HUH, UR, HOLD, WHAT?, YOU</td>
+                </tr>
+                <tr>
+                    <th>"YOU'RE":</th>
+                    <td>YOU, YOU'RE</td>
+                </tr>
+                <tr>
+                    <th>"YOUR":</th>
+                    <td>UH UH, YOU ARE, UH HUH, YOUR</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="sectionMemory">
+            <h2>Memory</h2>
+            <table>
+                <tr>
+                    <th>Stage</th>
+                    <th>Display</th>
+                    <th>Pos.</th>
+                    <th>Label</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" maxlength="1" id="stage_1_display" data-index="1"></td>
+                    <td><input type="text" maxlength="1" id="stage_1_pos" /></td>
+                    <td><input type="text" maxlength="1" id="stage_1_label" /></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" maxlength="1" id="stage_2_display" data-index="2"></td>
+                    <td><input type="text" maxlength="1" id="stage_2_pos" /></td>
+                    <td><input type="text" maxlength="1" id="stage_2_label" /></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input type="text" maxlength="1" id="stage_3_display" data-index="3"></td>
+                    <td><input type="text" maxlength="1" id="stage_3_pos" /></td>
+                    <td><input type="text" maxlength="1" id="stage_3_label" /></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><input type="text" maxlength="1" id="stage_4_display" data-index="4"></td>
+                    <td><input type="text" maxlength="1" id="stage_4_pos" /></td>
+                    <td><input type="text" maxlength="1" id="stage_4_label" /></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><input type="text" maxlength="1" id="stage_5_display" data-index="5"></td>
+                    <td><input type="text" maxlength="1" id="stage_5_pos" /></td>
+                    <td><input type="text" maxlength="1" id="stage_5_label" /></td>
+                </tr>
+            </table>
+
+            <button class="jsResetSection">Reset</button>
+        </section>
+
+        <section id="sectionMorse">
+            <h2>Morse</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>Freq</th>
+                    </tr>
+                </thead>
+                <tbody id="morseTable"></tbody>
+            </table>
+
+            <textarea id="morseInput" rows="7" cols="40"></textarea>
+        </section>
+
+        <section id="sectionSequence">
+            <h2>Wire Sequence</h2>
+            <ul id="sequenceOptions">
+                <li><button class="buttonRed" data-colour="red" data-letter="A">A</button></li>
+                <li><button class="buttonBlue" data-colour="blue" data-letter="A">A</button></li>
+                <li><button class="buttonBlack" data-colour="black" data-letter="A">A</button></li>
+                <li><button class="buttonRed" data-colour="red" data-letter="B">B</button></li>
+                <li><button class="buttonBlue" data-colour="blue" data-letter="B">B</button></li>
+                <li><button class="buttonBlack" data-colour="black" data-letter="B">B</button></li>
+                <li><button class="buttonRed" data-colour="red" data-letter="C">C</button></li>
+                <li><button class="buttonBlue" data-colour="blue" data-letter="C">C</button></li>
+                <li><button class="buttonBlack" data-colour="black" data-letter="C">C</button></li>
+            </ul>
+            <ul id="sequenceInstruction"></ul>
+        </section>
+
+        <section>
+            <h2>Venn Diagram</h2>
+            <ul id="vennOptions">
+                <li><input type="checkbox" id="vennRed" /> <label for="vennRed">Red</label></li>
+                <li><input type="checkbox" id="vennBlue" /> <label for="vennBlue">Blue</label></li>
+                <li><input type="checkbox" id="vennStar" /> <label for="vennStar">Star</label></li>
+                <li><input type="checkbox" id="vennLed" /> <label for="vennLed">LED</label></li>
+            </ul>
+            <div id="vennInstruction"></div>
+        </section>
+
+        <section>
+            <h2>Passwords</h2>
+            <table id="passwords"></table>
+            <ul id="passwordOptions">
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+            </ul>
+            <button class="jsResetSection">Reset</button>
+        </section>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="ktane.js"></script>
+    </body>
+</html>

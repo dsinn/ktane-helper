@@ -1,0 +1,177 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: monospace;
+}
+section {
+    border-top: 1px solid black;
+    clear: both;
+    padding: 1em;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    padding: 0.2em 0.5em;
+}
+ul {
+    list-style-type: none;
+}
+button {
+    border-width: 1px;
+}
+
+.buttonRed, .buttonYellow, .buttonBlue, .buttonWhite, .buttonBlack {
+    color: black;
+    padding: 0.2em;
+}
+.buttonRed {
+    background-color: red;
+    color: white;
+}
+.buttonYellow {
+    background-color: yellow;
+}
+.buttonBlue {
+    background-color: blue;
+    color: white;
+}
+.buttonWhite {
+    background-color: white;
+    border-color: black;
+}
+.buttonBlack {
+    background-color: black;
+    color: white;
+}
+
+.active {
+    opacity: 1;
+}
+.inactive {
+    opacity: 0.3;
+}
+
+h2 {
+    cursor: pointer;
+}
+.collapsed {
+    padding: 0;
+}
+.collapsed * {
+    display: none;
+}
+.collapsed h2 {
+    display: block;
+    font-size: small;
+    margin: 0;
+}
+
+.jsResetSection {
+    margin-top: 1em;
+}
+
+#sectionWires button {
+    border-color: black;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+}
+#wireOptions li {
+    display: inline-block;
+}
+#wireList {
+    list-style-type: decimal;
+}
+.wireToCut:after {
+    color: green;
+}
+.wireToCut:after, .wireToCut.odd.even:after {
+    content: '\27fd';
+}
+.wireToCut.odd:after {
+    content: '\27fd\a0 odd';
+}
+.wireToCut.even:after {
+    content: '\27fd\a0 even';
+}
+
+#sectionButton {
+    line-height: 150%;
+}
+#sectionButton div {
+    margin-bottom: 1em;
+}
+#sectionButton .buttonWhite {
+    border-style: solid;
+    border-width: 1px;
+}
+
+#sectionDisplay {
+    white-space: nowrap;
+}
+#sectionDisplay dl, #sectionDisplay table {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+#sectionDisplay.collapsed dl, #sectionDisplay.collapsed table {
+    display: none;
+}
+#sectionDisplay dl {
+    margin-right: 4em;
+}
+#sectionDisplay dt {
+    background-color: black;
+    clear: left;
+    color: white;
+    margin-right: 1em;
+    text-align: center;
+    width: 6em;
+}
+#sectionDisplay dd {
+    margin-bottom: 0.4em;
+    margin-left: 0;
+}
+#sectionDisplay dt, #sectionDisplay dd {
+    display: inline-block;
+    float: left;
+}
+#sectionDisplay table {
+    margin-left: 0.5em;
+}
+#sectionDisplay th {
+    border: 1px solid black;
+}
+
+#sectionMemory td {
+    text-align: right;
+}
+#sectionMemory input {
+    text-align: center;
+    width: 5em;
+}
+
+#sectionMorse table {
+    float: left;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+#sectionSequence button {
+    cursor: pointer;
+    width: 2em;
+}
+#sequenceOptions {
+    padding-left: 0;
+    width: 7.9em;
+}
+#sequenceOptions li {
+    display: inline-block;
+}
+#sequenceInstruction {
+    list-style-type: decimal;
+}
+#sequenceInstruction button {
+    margin-right: 0.2em;
+}
