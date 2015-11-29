@@ -120,6 +120,9 @@ h2 {
     float: left;
     margin-right: 5em;
 }
+.collapsed #simonBoard {
+    display: none;
+}
 #simonBoard {
     display: inline-block;
     padding-bottom: 40px; /* Compensate for height increase as a result of rotation */
