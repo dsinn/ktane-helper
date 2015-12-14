@@ -172,7 +172,6 @@ $('.jsResetSection').on('click', function () {
      */
     var $checkbox = $('#simonVowel'),
         $strikeButtons = $('#sectionSimon input[name="simonStrikes"]'),
-        $board = $('#simonBoard'),
         $arrows = [],
         mappings = [ // (hasVowel, strikes) -> list of visible arrows
             // No vowel
@@ -189,7 +188,7 @@ $('.jsResetSection').on('click', function () {
             ]
         ];
 
-    $board.find('.arrow').each(function (i, arrow) {
+    $('#simonBoard').find('.arrow').each(function (i, arrow) {
         $arrows[arrow.id.replace(/^.*(?=..$)/, '')] = $(arrow);
     });
 
@@ -204,7 +203,7 @@ $('.jsResetSection').on('click', function () {
         $.each(mappings[hasVowel][strikes], function (i, id) {
             $arrows[id].addClass('active');
         });
-    });
+    }).first().trigger('change');
 })();
 
 (function () {
