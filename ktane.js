@@ -171,14 +171,39 @@ $('.jsResetSection').on('click', function () {
      * Simon
      */
     var $checkbox = $('#simonVowel'),
-        $strikeButtons = $('#sectionSimon input[name="simonStrikes"]');
+        $strikeButtons = $('#sectionSimon input[name="simonStrikes"]'),
+        $board = $('#simonBoard'),
+        $arrows = [],
+        mappings = [ // (hasVowel, strikes) -> list of visible arrows
+            // No vowel
+            [
+                ['RB', 'BY', 'YR'],
+                ['GY', 'YG'],
+                ['RY', 'BG', 'GB', 'YR']
+            ],
+            // Vowel
+            [
+                ['RB', 'BR', 'GY', 'YG'],
+                ['RY', 'BG', 'GB', 'YR'],
+                ['RG', 'BR', 'GY', 'YB']
+            ]
+        ];
+
+    $board.find('.arrow').each(function (i, arrow) {
+        $arrows[arrow.id.replace(/^.*(?=..$)/, '')] = $(arrow);
+    });
 
     $('#sectionSimon input').on('change', function () {
-        var hasVowel = $checkbox.prop('checked'),
+        var hasVowel = +$checkbox.prop('checked'),
             strikes = $strikeButtons.filter(':checked').val();
 
-        // Do something with arrows and stuff!
-        console.log({vowel: hasVowel, strikes: strikes});
+        for (var i in $arrows) {
+            $arrows[i].removeClass('active');
+        }
+
+        $.each(mappings[hasVowel][strikes], function (i, id) {
+            $arrows[id].addClass('active');
+        });
     });
 })();
 
