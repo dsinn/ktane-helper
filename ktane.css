@@ -135,16 +135,16 @@ h2 {
     height: 64px;
     width: 64px;
 }
-#simonBoard > div:first-child > div {
+#simonBoard > .simonRow:first-child > div {
     border-top-width: 4px;
 }
-#simonBoard > div:last-child > div {
+#simonBoard > .simonRow:first-child + div > div {
     border-bottom-width: 4px;
 }
-#simonBoard > div > div:first-child {
+#simonBoard > .simonRow > div:first-child {
     border-left-width: 4px;
 }
-#simonBoard > div > div:last-child {
+#simonBoard > .simonRow > div:last-child {
     border-right-width: 4px;
 }
 

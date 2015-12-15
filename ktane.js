@@ -173,7 +173,7 @@ $('.jsResetSection').on('click', function () {
     var $checkbox = $('#simonVowel'),
         $strikeButtons = $('#sectionSimon input[name="simonStrikes"]'),
         $arrows = [],
-        mappings = [ // (hasVowel, strikes) -> list of visible arrows
+        mappings = [ // (hasVowel, strikes) -> list of visible arrows by ID
             // No vowel
             [
                 ['RB', 'BY', 'YR'],
@@ -196,8 +196,8 @@ $('.jsResetSection').on('click', function () {
         var hasVowel = +$checkbox.prop('checked'),
             strikes = $strikeButtons.filter(':checked').val();
 
-        for (var i in $arrows) {
-            $arrows[i].removeClass('active');
+        for (var id in $arrows) {
+            $arrows[id].removeClass('active');
         }
 
         $.each(mappings[hasVowel][strikes], function (i, id) {
