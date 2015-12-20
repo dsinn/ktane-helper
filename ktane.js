@@ -42,8 +42,8 @@ $('.jsResetSection').on('click', function () {
     $('#wireOptions button').on('click', function () {
         var colour = this.getAttribute('data-colour'),
             letter = this.getAttribute('data-letter'),
-            $li = $('<li><button class="button' + colour.charAt(0).toUpperCase() + colour.substring(1)
-                        + '" data-colour="' + colour + '" data-letter="' + letter + '"></button></li>');
+            $li = $('<li><button class="button ' + colour + '" data-colour="' + colour
+                    + '" data-letter="' + letter + '"></button></li>');
 
         $wireList.append($li);
         count[colour]++;
@@ -164,6 +164,46 @@ $('.jsResetSection').on('click', function () {
 
         $instruction.html(instruction);
     });
+})();
+
+(function () {
+    /**
+     * Simon
+     */
+    var $checkbox = $('#simonVowel'),
+        $strikeButtons = $('#sectionSimon input[name="simonStrikes"]'),
+        $arrows = [],
+        mappings = [ // (hasVowel, strikes) -> list of visible arrows by ID
+            // No vowel
+            [
+                ['RB', 'BY', 'YR'],
+                ['GY', 'YG'],
+                ['RY', 'BG', 'GB', 'YR']
+            ],
+            // Vowel
+            [
+                ['RB', 'BR', 'GY', 'YG'],
+                ['RY', 'BG', 'GB', 'YR'],
+                ['RG', 'BR', 'GY', 'YB']
+            ]
+        ];
+
+    $('#simonBoard').find('.arrow').each(function (i, arrow) {
+        $arrows[arrow.id.replace(/^.*(?=..$)/, '')] = $(arrow);
+    });
+
+    $('#sectionSimon input').on('change', function () {
+        var hasVowel = +$checkbox.prop('checked'),
+            strikes = $strikeButtons.filter(':checked').val();
+
+        for (var id in $arrows) {
+            $arrows[id].removeClass('active');
+        }
+
+        $.each(mappings[hasVowel][strikes], function (i, id) {
+            $arrows[id].addClass('active');
+        });
+    }).first().trigger('change');
 })();
 
 (function () {
@@ -350,8 +390,8 @@ $('.jsResetSection').on('click', function () {
     $('#sequenceOptions button').on('click', function () {
         var colour = this.getAttribute('data-colour'),
                 letter = this.getAttribute('data-letter'),
-                $li = $('<li><button class="button' + colour.charAt(0).toUpperCase() + colour.substring(1)
-                        + '" data-colour="' + colour + '" data-letter="' + letter + '">' + letter + '</button></li>');
+                $li = $('<li><button class="button ' + colour + '" data-colour="' + colour + '" data-letter="' + letter
+                        + '">' + letter + '</button></li>');
 
         if (typeof occurrences[colour][count[colour]] !== 'undefined') {
             $li.append(occurrences[colour][count[colour]].indexOf(letter) === -1 ? 'Ignore' : 'Cut');

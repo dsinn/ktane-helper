@@ -13,11 +13,11 @@
             <h2>Wires</h2>
 
             <ul id="wireOptions">
-                <li><button class="buttonRed" data-colour="red"></button></li>
-                <li><button class="buttonYellow" data-colour="yellow"></button></li>
-                <li><button class="buttonBlue" data-colour="blue"></button></li>
-                <li><button class="buttonWhite" data-colour="white"></button></li>
-                <li><button class="buttonBlack" data-colour="black"></button></li>
+                <li><button class="button red" data-colour="red"></button></li>
+                <li><button class="button yellow" data-colour="yellow"></button></li>
+                <li><button class="button blue" data-colour="blue"></button></li>
+                <li><button class="button white" data-colour="white"></button></li>
+                <li><button class="button black" data-colour="black"></button></li>
             </ul>
 
             <ul id="wireList"></ul>
@@ -27,10 +27,10 @@
             <h2>Button</h2>
             <div>
                 Colour:
-                <input type="radio" name="buttonColour" value="blue" id="buttonColourBlue" checked /> <label for="buttonColourBlue" class="buttonBlue">Blue</label>
-                <input type="radio" name="buttonColour" value="white" id="buttonColourWhite" /> <label for="buttonColourWhite" class="buttonWhite">White</label>
-                <input type="radio" name="buttonColour" value="yellow" id="buttonColourYellow" /> <label for="buttonColourYellow" class="buttonYellow">Yellow</label>
-                <input type="radio" name="buttonColour" value="red" id="buttonColourRed" /> <label for="buttonColourRed" class="buttonRed">Red</label>
+                <input type="radio" name="buttonColour" value="blue" id="buttonColourBlue" checked /> <label for="buttonColourBlue" class="button blue">Blue</label>
+                <input type="radio" name="buttonColour" value="white" id="buttonColourWhite" /> <label for="buttonColourWhite" class="button white">White</label>
+                <input type="radio" name="buttonColour" value="yellow" id="buttonColourYellow" /> <label for="buttonColourYellow" class="button yellow">Yellow</label>
+                <input type="radio" name="buttonColour" value="red" id="buttonColourRed" /> <label for="buttonColourRed" class="button red">Red</label>
             </div>
             <div>
                 Text:
@@ -43,10 +43,54 @@
             <div>
                 If holding the button and the strip colour is
                 <ul>
-                    <li><span class="buttonBlue">Blue</span>: release when timer has a <strong>4</strong> in any position.</li>
-                    <li><span class="buttonYellow">Yellow</span>: release when timer has a <strong>5</strong> in any position.</li>
+                    <li><span class="button blue">Blue</span>: release when timer has a <strong>4</strong> in any position.</li>
+                    <li><span class="button yellow">Yellow</span>: release when timer has a <strong>5</strong> in any position.</li>
                     <li>Other: release when timer has a <strong>1</strong> in any position.</li>
                 </ul>
+            </div>
+        </section>
+
+        <section id="sectionSimon">
+            <h2>Simon Says</h2>
+
+            <div id="simonInputs">
+                <input type="checkbox" id="simonVowel" /> <label for="simonVowel">Vowel</label>
+
+                <ul>
+                    <li>
+                        <input type="radio" name="simonStrikes" value="0" id="simonStrikes0" checked />
+                        <label for="simonStrikes0">0 strikes</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="simonStrikes" value="1" id="simonStrikes1" />
+                        <label for="simonStrikes1">1 strike</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="simonStrikes" value="2" id="simonStrikes2" />
+                        <label for="simonStrikes2">2 strikes</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="simonBoard">
+                <div class="simonRow">
+                    <div class="blue">&nbsp;</div><div class="yellow">&nbsp;</div>
+                </div>
+                <div class="simonRow">
+                    <div class="red">&nbsp;</div><div class="green">&nbsp;</div>
+                </div>
+                <div class="arrow" id="arrowRB"></div>
+                <div class="arrow" id="arrowBR"></div>
+                <div class="arrow" id="arrowBY"></div>
+                <div class="arrow" id="arrowYB"></div>
+                <div class="arrow" id="arrowYG"></div>
+                <div class="arrow" id="arrowGY"></div>
+                <div class="arrow" id="arrowGR"></div>
+                <div class="arrow" id="arrowRG"></div>
+                <div class="arrow" id="arrowRY"></div>
+                <div class="arrow" id="arrowYR"></div>
+                <div class="arrow" id="arrowBG"></div>
+                <div class="arrow" id="arrowGB"></div>
             </div>
         </section>
 
@@ -264,15 +308,15 @@
         <section id="sectionSequence">
             <h2>Wire Sequence</h2>
             <ul id="sequenceOptions">
-                <li><button class="buttonRed" data-colour="red" data-letter="A">A</button></li>
-                <li><button class="buttonBlue" data-colour="blue" data-letter="A">A</button></li>
-                <li><button class="buttonBlack" data-colour="black" data-letter="A">A</button></li>
-                <li><button class="buttonRed" data-colour="red" data-letter="B">B</button></li>
-                <li><button class="buttonBlue" data-colour="blue" data-letter="B">B</button></li>
-                <li><button class="buttonBlack" data-colour="black" data-letter="B">B</button></li>
-                <li><button class="buttonRed" data-colour="red" data-letter="C">C</button></li>
-                <li><button class="buttonBlue" data-colour="blue" data-letter="C">C</button></li>
-                <li><button class="buttonBlack" data-colour="black" data-letter="C">C</button></li>
+                <li><button class="button red" data-colour="red" data-letter="A">A</button></li>
+                <li><button class="button blue" data-colour="blue" data-letter="A">A</button></li>
+                <li><button class="button black" data-colour="black" data-letter="A">A</button></li>
+                <li><button class="button red" data-colour="red" data-letter="B">B</button></li>
+                <li><button class="button blue" data-colour="blue" data-letter="B">B</button></li>
+                <li><button class="button black" data-colour="black" data-letter="B">B</button></li>
+                <li><button class="button red" data-colour="red" data-letter="C">C</button></li>
+                <li><button class="button blue" data-colour="blue" data-letter="C">C</button></li>
+                <li><button class="button black" data-colour="black" data-letter="C">C</button></li>
             </ul>
             <ul id="sequenceInstruction"></ul>
         </section>
