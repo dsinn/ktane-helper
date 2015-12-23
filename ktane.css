@@ -225,20 +225,20 @@ h2 {
     transform: rotate(-135deg);
 }
 
-#sectionDisplay {
+#sectionWof {
     white-space: nowrap;
 }
-#sectionDisplay dl, #sectionDisplay table {
+#sectionWof dl, #sectionWof table {
     display: inline-block;
     margin-bottom: 1em;
 }
-#sectionDisplay.collapsed dl, #sectionDisplay.collapsed table {
+#sectionWof.collapsed dl, #sectionWof.collapsed table {
     display: none;
 }
-#sectionDisplay dl {
+#sectionWof dl {
     margin-right: 4em;
 }
-#sectionDisplay dt {
+#sectionWof dt {
     background-color: black;
     clear: left;
     color: white;
@@ -246,18 +246,21 @@ h2 {
     text-align: center;
     width: 6em;
 }
-#sectionDisplay dd {
+#sectionWof dd {
     margin-bottom: 0.4em;
     margin-left: 0;
 }
-#sectionDisplay dt, #sectionDisplay dd {
+#sectionWof dt, #sectionWof dd {
     display: inline-block;
     float: left;
 }
-#sectionDisplay table {
+#sectionWof dt.inactive + dd {
+    opacity: 0;
+}
+#sectionWof table {
     margin-left: 0.5em;
 }
-#sectionDisplay th {
+#sectionWof th {
     border: 1px solid black;
 }
 
