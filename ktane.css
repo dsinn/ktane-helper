@@ -125,6 +125,7 @@ h2 {
 #sectionKeypads li {
     border: 1px solid black;
     border-bottom: 0;
+    cursor: pointer;
 }
 #sectionKeypads li:last-child {
     border-bottom: 1px solid black;
