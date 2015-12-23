@@ -7,6 +7,7 @@ $('h2').on('dblclick', function () {
     $(this).closest('section').toggleClass('collapsed');
 }).attr('title', 'Double-click to expand/collapse');
 
+/** Reset inputs */
 ktane.resetInputs = function ($container) {
     $container.find('textarea').val('');
 
@@ -26,9 +27,15 @@ $('.jsResetSection').on('click', function () {
     ktane.resetInputs($(this).closest('section')).filter('[type="text"]').first().focus();
 });
 
+/** Navigation */
 $('section').each(function () {
-    var $navList = $('#navList');
-    $navList.append('<li><a href="#' + this.id + '">' + $(this).find('h2').first().text() + '</a></li>');
+    var $section = $(this),
+        id = $section.attr('id'),
+        $a = $('<a href="#' + id + '">' + $(this).find('h2').first().text() + '</a>').on('click', function () {
+            $section.removeClass('collapsed');
+        });
+
+    id && $('#navList').append($('<li></li>').append($a));
 });
 
 (function () {
