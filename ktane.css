@@ -80,6 +80,21 @@ h2 {
     margin-top: 1em;
 }
 
+nav {
+    background-color: white;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#navList {
+    line-height: 150%;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0.2em;
+}
+
 #sectionWires button {
     border-color: black;
     cursor: pointer;

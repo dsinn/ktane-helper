@@ -26,6 +26,11 @@ $('.jsResetSection').on('click', function () {
     ktane.resetInputs($(this).closest('section')).filter('[type="text"]').first().focus();
 });
 
+$('section').each(function () {
+    var $navList = $('#navList');
+    $navList.append('<li><a href="#' + this.id + '">' + $(this).find('h2').first().text() + '</a></li>');
+});
+
 (function () {
     /**
      * Wires
