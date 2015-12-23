@@ -26,19 +26,19 @@ button {
     padding: 0.2em;
 }
 .red {
-    background-color: red;
+    background: radial-gradient(#fb9a9a,#fc7373,red);
     color: white;
 }
 .yellow {
-    background-color: yellow;
+    background: radial-gradient(#fbfb9a,#fcfc73,yellow);
     color: black;
 }
 .blue {
-    background-color: blue;
+    background: radial-gradient(#9a9afb,#7373fc,blue);
     color: white;
 }
 .green {
-    background-color: green;
+    background: radial-gradient(#98c998,#72b772,green);
     color: white;
 }
 .white {
@@ -47,7 +47,7 @@ button {
     color: black;
 }
 .black {
-    background-color: black;
+    background: radial-gradient(#969696,#757575,black);
     color: white;
 }
 .button.white {
@@ -149,7 +149,7 @@ h2 {
 }
 
 .arrow {
-    background-color: magenta;
+    background-color: black;
     height: 10px;
     width: 50px;
     opacity: 0;
@@ -158,7 +158,7 @@ h2 {
 .arrow::after {
     content: '';
     border-top: 10px solid transparent;
-    border-left: 20px solid magenta;
+    border-left: 20px solid black;
     border-bottom: 10px solid transparent;
     height: 0;
     width: 0;
