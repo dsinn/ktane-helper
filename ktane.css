@@ -26,19 +26,19 @@ button {
     padding: 0.2em;
 }
 .red {
-    background: radial-gradient(#fb9a9a,#fc7373,red);
+    background-color: red;
     color: white;
 }
 .yellow {
-    background: radial-gradient(#fbfb9a,#fcfc73,yellow);
+    background-color: yellow;
     color: black;
 }
 .blue {
-    background: radial-gradient(#9a9afb,#7373fc,blue);
+    background-color: blue;
     color: white;
 }
 .green {
-    background: radial-gradient(#98c998,#72b772,green);
+    background-color: green;
     color: white;
 }
 .white {
@@ -47,7 +47,7 @@ button {
     color: black;
 }
 .black {
-    background: radial-gradient(#969696,#757575,black);
+    background-color: black;
     color: white;
 }
 .button.white {
@@ -146,6 +146,18 @@ h2 {
 }
 #simonBoard > .simonRow > div:last-child {
     border-right-width: 4px;
+}
+.simonRed {
+    background: radial-gradient(#fb9a9a, #fc7373, red);
+}
+.simonYellow {
+    background: radial-gradient(#fbfb9a, #fcfc73, yellow);
+}
+.simonBlue {
+    background: radial-gradient(#9a9afb, #7373fc, blue);
+}
+.simonGreen {
+    background: radial-gradient(#98c998, #72b772, green);
 }
 
 .arrow {
