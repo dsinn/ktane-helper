@@ -116,6 +116,28 @@ h2 {
     border-width: 1px;
 }
 
+#sectionKeypads ul {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 2em;
+    padding-left: 0;
+}
+#sectionKeypads li {
+    border: 1px solid black;
+    border-bottom: 0;
+    cursor: pointer;
+    line-height: 0;
+}
+#sectionKeypads li:last-child {
+    border-bottom: 1px solid black;
+}
+#sectionKeypads .selected {
+    background: #ff6;
+}
+#sectionKeypads ul[data-count='4'] .selected {
+    background: lightgreen;
+}
+
 #simonInputs {
     float: left;
     margin-right: 5em;
