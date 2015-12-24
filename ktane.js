@@ -165,7 +165,7 @@ $('section').each(function () {
         if (text === 'Detonate') {
             instruction = 'If 2+ \ud83d\udd0b, press and release.<br />Otherwise, hold button.'
         } else if (colour === 'white') {
-            instruction = 'If lit indicator [CAR], hold button.<br />Otherwise, if 3+ \ud83d\udd0b and lit indicator [FRK], press and release.<br />Otherwise, hold button.'
+            instruction = 'If <span class="litIndicator" title="Lit indicator">CAR</span>, hold button.<br />Otherwise, if 3+ \ud83d\udd0b and <span class="litIndicator" title="Lit indicator">FRK</span>, press and release.<br />Otherwise, hold button.'
         } else if (colour === 'blue' && text === 'Abort'
                 || colour === 'yellow') {
             instruction = 'Hold button.';
