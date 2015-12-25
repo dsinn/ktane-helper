@@ -172,7 +172,7 @@ $('section').each(function () {
         } else if (colour === 'red' && text === 'Hold') {
             instruction = 'Press and release.';
         } else {
-            instruction = 'If 3+ \ud83d\udd0b and lit indicator [FRK], press and release the button.<br />Otherwise, hold button.';
+            instruction = 'If 3+ \ud83d\udd0b and <span class="litIndicator" title="Lit indicator">FRK</span>, press and release the button.<br />Otherwise, hold button.';
         }
 
         $instruction.html(instruction);
