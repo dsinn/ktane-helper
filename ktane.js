@@ -163,20 +163,20 @@ $('section').each(function () {
                 text = $('input[name="buttonText"]:checked').val();
 
         if (text === 'Detonate') {
-            instruction = 'If there is more than 1 battery, press and release; otherwise, hold the button.'
+            instruction = 'If 2+ \ud83d\udd0b, press and release.<br />Otherwise, hold button.'
         } else if (colour === 'white') {
-            instruction = 'If there is a lit indicator with label CAR, hold the button. Otherwise, if there are more than 2 batteries and a lit indicator with label FRK, press and release the button. If neither apply, hold the button.'
+            instruction = 'If <span class="litIndicator" title="Lit indicator">CAR</span>, hold button.<br />Otherwise, if 3+ \ud83d\udd0b and <span class="litIndicator" title="Lit indicator">FRK</span>, press and release.<br />Otherwise, hold button.'
         } else if (colour === 'blue' && text === 'Abort'
                 || colour === 'yellow') {
-            instruction = 'Hold the button.';
+            instruction = 'Hold button.';
         } else if (colour === 'red' && text === 'Hold') {
-            instruction = 'Press and release the button.';
+            instruction = 'Press and release.';
         } else {
-            instruction = 'If there are more than 2 batteries and a lit indicator with label FRK, press and release the button; otherwise, hold the button.';
+            instruction = 'If 3+ \ud83d\udd0b and <span class="litIndicator" title="Lit indicator">FRK</span>, press and release the button.<br />Otherwise, hold button.';
         }
 
         $instruction.html(instruction);
-    });
+    }).triggerHandler('click');
 })();
 
 (function () {
