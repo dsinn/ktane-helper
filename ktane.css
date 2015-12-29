@@ -25,6 +25,10 @@ button {
     border-width: 1px;
 }
 
+.instruction {
+    background-color: #eee;
+    padding: 0.5em;
+}
 .button {
     padding: 0.2em;
 }
@@ -142,10 +146,6 @@ nav {
 #sectionButton .buttonWhite {
     border-style: solid;
     border-width: 1px;
-}
-#buttonInstruction {
-    background-color: #eee;
-    padding: 0.5em;
 }
 
 #sectionKeypads ul {

@@ -155,7 +155,7 @@ $('section').each(function () {
      * Button
      */
     var $section = $('#sectionButton'),
-            $instruction = $('#buttonInstruction'),
+            $instruction = $section.find('.instruction'),
             instruction;
 
     $section.find('input').on('click', function () {
@@ -618,7 +618,7 @@ $('section').each(function () {
                 }
             },
             $checkboxes = $('#vennOptions > li > input'),
-            $instruction = $('#vennInstruction');
+            $instruction = $('#sectionVenn .instruction');
 
     //         Red    Blue   Star   LED
     conditions[false][false][false][false] = 'C';
