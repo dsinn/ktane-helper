@@ -593,11 +593,11 @@ $('section').each(function () {
      * Venn diagram
      */
     var instructions = {
-                C: 'Cut the wire',
-                D: '<strong>Do not</strong> cut the wire',
-                S: 'If the last digit of the serial number is even, cut the wire',
-                P: 'If the bomb has a parallel port, cut the wire',
-                B: 'If the bomb has two or more batteries, cut the wire'
+                C: 'Cut',
+                D: '<strong>Do not</strong> cut',
+                S: 'If last digit of serial is even, cut',
+                P: 'If parallel port, cut',
+                B: 'If 2+ \ud83d\udd0b, cut'
             },
             conditions = { // Initialize
                 false: {
