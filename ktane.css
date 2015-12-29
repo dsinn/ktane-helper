@@ -8,6 +8,9 @@ section {
     clear: both;
     padding: 1em;
 }
+h2 {
+    margin-top: 0;
+}
 table {
     border-collapse: collapse;
 }
