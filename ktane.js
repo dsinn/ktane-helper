@@ -645,7 +645,7 @@ $('section').each(function () {
         });
 
         $instruction.html(instructions[conditions[checked[0]][checked[1]][checked[2]][checked[3]]]);
-    });
+    }).triggerHandler('change');
 })();
 
 (function () {
@@ -687,7 +687,7 @@ $('section').each(function () {
         regex = new RegExp(pattern);
 
         $passwords.forEach(function ($password) {
-            $password.toggleClass("inactive", !$password.text().match(regex));
+            $password.toggleClass('inactive', !$password.text().match(regex));
         });
     });
 })();

@@ -87,7 +87,7 @@ h2 {
 }
 
 .jsResetSection {
-    margin-top: 1em;
+    display: block;
 }
 
 nav {
@@ -141,7 +141,7 @@ nav {
     border-width: 1px;
 }
 #buttonInstruction {
-    background-color: #ddd;
+    background-color: #eee;
     padding: 0.5em;
 }
 
@@ -161,10 +161,10 @@ nav {
     border-bottom: 1px solid black;
 }
 #sectionKeypads .selected {
-    background: #ff6;
+    background-color: #ff6;
 }
 #sectionKeypads ul[data-count='4'] .selected {
-    background: lightgreen;
+    background-color: lightgreen;
 }
 
 #simonInputs {
@@ -327,6 +327,9 @@ nav {
     border: 1px solid black;
 }
 
+#sectionMemory table {
+    margin-top: 1em;
+}
 #sectionMemory td {
     text-align: right;
 }
