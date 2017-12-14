@@ -617,7 +617,7 @@ $('section').each(function () {
                     }
                 }
             },
-            $checkboxes = $('#vennOptions > li > input'),
+            $checkboxes = $('#vennOptions input[type="checkbox"]'),
             $instruction = $('#sectionVenn .instruction');
 
     //         Red    Blue   Star   LED
@@ -646,6 +646,69 @@ $('section').each(function () {
 
         $instruction.html(instructions[conditions[checked[0]][checked[1]][checked[2]][checked[3]]]);
     }).triggerHandler('change');
+})();
+
+(function () {
+    /**
+     * Alternate Venn diagram
+     */
+    var $doCut = $('#venn2DoCut'),
+        $doNotCut = $('#venn2DoNotCut'),
+        $checkboxes = $('#sectionVenn2 input[type="checkbox"]'),
+        $serialEven = $('#venn2SerialEven'),
+        $parallelExists = $('#venn2ParallelExists'),
+        $multipleBatteries = $('#venn2MultipleBatteries');
+
+    $checkboxes.on('change', function () {
+        var $serialList,
+            $parallelList,
+            $batteryList;
+
+        $doCut.empty();
+        $doNotCut.empty();
+
+        $serialList = $serialEven.prop('checked') ? $doCut : $doNotCut;
+        $parallelList = $parallelExists.prop('checked') ? $doCut : $doNotCut;
+        $batteryList = $multipleBatteries.prop('checked') ? $doCut : $doNotCut;
+
+        addRow($doCut, [
+            {},
+            {star: true},
+            {red: true, star: true}
+        ]);
+        addRow($doNotCut, [
+            {light: true},
+            {blue: true, light: true},
+            {red: true, blue: true, star: true, light: true}
+        ]);
+        addRow($serialList, [
+            {red: true},
+            {blue: true},
+            {red: true, blue: true},
+            {red: true, blue: true, light: true}
+        ]);
+        addRow($parallelList, [
+            {blue: true, light: true},
+            {red: true, blue: true, star: true},
+            {blue: true, star: true, light: true}
+        ]);
+        addRow($batteryList, [
+            {red: true, light: true},
+            {star: true, light: true},
+            {red: true, star: true, light: true}
+        ]);
+    }).triggerHandler('change');
+
+    function addRow($table, items) {
+        $.each(items, function (i, item) {
+            var $tr = $('<tr></tr>');
+            $tr.append($('<td>' + (item.star ? '★' : '') + '</td>'));
+            $tr.append($('<td' + (item.red ? ' class="red"' : '') + '></td>'));
+            $tr.append($('<td' + (item.blue ? ' class="blue"' : '') + '></td>'));
+            $tr.append($('<td>' + (item.light ? '💡' : '') + '</td>'));
+            $table.append($tr);
+        });
+    }
 })();
 
 (function () {
