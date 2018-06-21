@@ -364,3 +364,8 @@ nav {
 #sequenceInstruction button {
     margin-right: 0.2em;
 }
+
+#sectionVenn2 td {
+    height: 1.5em;
+    width: 1em;
+}
