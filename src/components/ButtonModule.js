@@ -57,10 +57,10 @@ export default class ButtonModule extends KtaneModule {
           {
             this.allColours.map(colour => (
               <ButtonModuleColourInput
-                colour={colour}
                 key={colour}
                 onChange={this.setColour}
-                stateColour={this.state.colour}
+                stateValue={this.state.colour}
+                value={colour}
               />
             ))
           }
@@ -73,8 +73,8 @@ export default class ButtonModule extends KtaneModule {
               <ButtonModuleTextInput
                 key={text}
                 onChange={this.setText}
-                stateText={this.state.text}
-                text={text}
+                stateValue={this.state.text}
+                value={text}
               />
             ))
           }
