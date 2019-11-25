@@ -112,31 +112,6 @@ nav {
     padding: 0.1em 0.5em;
 }
 
-#sectionWires button {
-    border-color: black;
-    cursor: pointer;
-    width: 2em;
-    height: 2em;
-}
-#wireOptions li {
-    display: inline-block;
-}
-#wireList {
-    list-style-type: decimal;
-}
-.wireToCut:after {
-    color: green;
-}
-.wireToCut:after, .wireToCut.odd.even:after {
-    content: '\27fd';
-}
-.wireToCut.odd:after {
-    content: '\27fd\a0 odd';
-}
-.wireToCut.even:after {
-    content: '\27fd\a0 even';
-}
-
 #sectionButton {
     line-height: 150%;
 }
