@@ -1,0 +1,10 @@
+#sectionButton {
+    line-height: 150%;
+}
+#sectionButton div {
+    margin-bottom: 1em;
+}
+#sectionButton .buttonWhite {
+    border-style: solid;
+    border-width: 1px;
+}

@@ -41,35 +41,6 @@ $('section').each(function () {
 
 (function () {
     /**
-     * Button
-     */
-    var $section = $('#sectionButton'),
-            $instruction = $section.find('.instruction'),
-            instruction;
-
-    $section.find('input').on('click', function () {
-        var colour = $('input[name="buttonColour"]:checked').val(),
-                text = $('input[name="buttonText"]:checked').val();
-
-        if (text === 'Detonate') {
-            instruction = 'If 2+ \ud83d\udd0b, press and release.<br />Otherwise, hold button.'
-        } else if (colour === 'white') {
-            instruction = 'If <span class="litIndicator" title="Lit indicator">CAR</span>, hold button.<br />Otherwise, if 3+ \ud83d\udd0b and <span class="litIndicator" title="Lit indicator">FRK</span>, press and release.<br />Otherwise, hold button.'
-        } else if (colour === 'blue' && text === 'Abort'
-                || colour === 'yellow') {
-            instruction = 'Hold button.';
-        } else if (colour === 'red' && text === 'Hold') {
-            instruction = 'Press and release.';
-        } else {
-            instruction = 'If 3+ \ud83d\udd0b and <span class="litIndicator" title="Lit indicator">FRK</span>, press and release the button.<br />Otherwise, hold button.';
-        }
-
-        $instruction.html(instruction);
-    }).triggerHandler('click');
-})();
-
-(function () {
-    /**
      * Keypads
      */
     var columns = [
