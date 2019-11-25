@@ -4,8 +4,9 @@
     width: 2em;
     height: 2em;
 }
-#wireOptions li {
+.wireOptions__item {
     display: inline-block;
+    margin-right: 0.5em;
 }
 #wireList {
     list-style-type: decimal;

@@ -151,17 +151,17 @@ export default class WiresModule extends KtaneModule {
   mainRender() {
     return (
       <>
-        <ul>
+        <ul className="wireOptions">
           {
             this.allColours.map(colour => (
-              <li key={`option_${colour}`}>
+              <li className="wireOptions__item" key={`option_${colour}`}>
                 <button className={`button ${colour}`} data-colour={colour} onClick={this.addWire} />
               </li>
             ))
           }
         </ul>
 
-        <ul id="wireList">
+        <ul className="wireList">
           {
             this.state.wires.map((wire, index) => (
               <li className={`${wire.shouldCut ? "wireToCut" : ""} ${wire.cutFlags.join(" ")}`} key={index}>
