@@ -1,31 +1,12 @@
-import PropTypes from 'prop-types';
-import React, {Component} from "react";
+import React from "react";
+import ButtonModuleTextInput from "./ButtonModuleTextInput";
 
-export default class ButtonModuleColourInput extends Component {
-  render() {
+export default class ButtonModuleColourInput extends ButtonModuleTextInput {
+  getLabelContent() {
     return (
-      <label>
-        <input
-          checked={this.props.stateColour === this.props.colour}
-          name="buttonColour"
-          onChange={this.props.onChange}
-          type="radio"
-          value={this.props.colour}
-        />
-        <span className={`button ${this.props.colour}`}>
-          {this.props.colour.charAt(0).toUpperCase() + this.props.colour.slice(1)}
-        </span>
-      </label>
+      <span className={`button ${this.props.value}`}>
+        {this.props.value.charAt(0).toUpperCase() + this.props.value.slice(1)}
+      </span>
     )
   }
-
-  shouldComponentUpdate(nextProps) {
-    return this.props.stateColour !== nextProps.stateColour;
-  }
 }
-
-ButtonModuleColourInput.propTypes = {
-  colour: PropTypes.string,
-  onChange: PropTypes.func,
-  stateColour: PropTypes.string
-};
