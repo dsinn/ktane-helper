@@ -93,10 +93,6 @@ h2 {
     margin: 0;
 }
 
-.jsResetSection {
-    display: block;
-}
-
 nav {
     background-color: white;
     border-left: 1px solid black;
@@ -110,28 +106,6 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0.1em 0.5em;
-}
-
-#sectionKeypads ul {
-    display: inline-block;
-    list-style-type: none;
-    margin-right: 2em;
-    padding-left: 0;
-}
-#sectionKeypads li {
-    border: 1px solid black;
-    border-bottom: 0;
-    cursor: pointer;
-    line-height: 0;
-}
-#sectionKeypads li:last-child {
-    border-bottom: 1px solid black;
-}
-#sectionKeypads .selected {
-    background-color: #ff6;
-}
-#sectionKeypads ul[data-count='4'] .selected {
-    background-color: lightgreen;
 }
 
 #simonInputs {

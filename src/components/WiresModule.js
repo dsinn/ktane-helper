@@ -174,8 +174,8 @@ export default class WiresModule extends KtaneModule {
     )
   }
 
-  resetState() {
-    this.state = {
+  getInitialState() {
+    return {
       // @TODO Convert this.allColours to a constant that is available here, i.e., before the constructor's super call
       counts: ["red", "yellow", "blue", "white", "black"].reduce((counts, colour) => {
         counts[colour] = 0;

@@ -1,0 +1,21 @@
+#sectionKeypads ul {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 2em;
+    padding-left: 0;
+}
+#sectionKeypads li {
+    border: 1px solid black;
+    border-bottom: 0;
+    cursor: pointer;
+    line-height: 0;
+}
+#sectionKeypads li:last-child {
+    border-bottom: 1px solid black;
+}
+#sectionKeypads .selected {
+    background-color: #ff6;
+}
+#sectionKeypads .matching .selected {
+    background-color: lightgreen;
+}

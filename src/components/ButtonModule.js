@@ -94,9 +94,9 @@ export default class ButtonModule extends KtaneModule {
     )
   }
 
-  resetState() {
+  getInitialState() {
     // @TODO Put string literals into constants
-    this.state = {
+    return {
       colour: "blue",
       text: "Abort"
     };
