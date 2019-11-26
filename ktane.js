@@ -41,46 +41,6 @@ $('section').each(function () {
 
 (function () {
     /**
-     * Simon
-     */
-    var $checkbox = $('#simonVowel'),
-        $strikeButtons = $('#sectionSimon input[name="simonStrikes"]'),
-        $arrows = [],
-        mappings = [ // (hasVowel, strikes) -> list of visible arrows by ID
-            // No vowel
-            [
-                ['RB', 'BY', 'YR'],
-                ['GY', 'YG'],
-                ['RY', 'BG', 'GB', 'YR']
-            ],
-            // Vowel
-            [
-                ['RB', 'BR', 'GY', 'YG'],
-                ['RY', 'BG', 'GB', 'YR'],
-                ['RG', 'BR', 'GY', 'YB']
-            ]
-        ];
-
-    $('#simonBoard').find('.arrow').each(function (i, arrow) {
-        $arrows[arrow.id.replace(/^.*(?=..$)/, '')] = $(arrow);
-    });
-
-    $('#sectionSimon input').on('change', function () {
-        var hasVowel = +$checkbox.prop('checked'),
-            strikes = $strikeButtons.filter(':checked').val();
-
-        for (var id in $arrows) {
-            $arrows[id].removeClass('active');
-        }
-
-        $.each(mappings[hasVowel][strikes], function (i, id) {
-            $arrows[id].addClass('active');
-        });
-    }).first().trigger('change');
-})();
-
-(function () {
-    /**
      * Who's on First
      */
     var TL = 'top-left',

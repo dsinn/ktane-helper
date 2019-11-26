@@ -1,0 +1,119 @@
+#simonInputs {
+    float: left;
+    margin-right: 5em;
+}
+.collapsed #simonBoard {
+    display: none;
+}
+#simonBoard {
+    display: inline-block;
+    padding-bottom: 40px; /* Compensate for height increase as a result of rotation */
+    position: relative;
+    transform: rotate(45deg);
+}
+#simonBoard > div > div {
+    border: 2px solid black;
+    display: inline-block;
+    height: 64px;
+    width: 64px;
+}
+#simonBoard > .simonRow:first-child > div {
+    border-top-width: 4px;
+}
+#simonBoard > .simonRow:first-child + div > div {
+    border-bottom-width: 4px;
+}
+#simonBoard > .simonRow > div:first-child {
+    border-left-width: 4px;
+}
+#simonBoard > .simonRow > div:last-child {
+    border-right-width: 4px;
+}
+.simonRed {
+    background: radial-gradient(#fb9a9a, #fc7373, red);
+}
+.simonYellow {
+    background: radial-gradient(#fbfb9a, #fcfc73, yellow);
+}
+.simonBlue {
+    background: radial-gradient(#9a9afb, #7373fc, blue);
+}
+.simonGreen {
+    background: radial-gradient(#98c998, #72b772, green);
+}
+
+.arrow {
+    background-color: black;
+    height: 10px;
+    width: 50px;
+    position: absolute;
+}
+.arrow::after {
+    content: '';
+    border-top: 10px solid transparent;
+    border-left: 20px solid black;
+    border-bottom: 10px solid transparent;
+    height: 0;
+    width: 0;
+    margin-left: 50px;
+    position: absolute;
+    top: -5px;
+}
+#arrowRB {
+    top: 70px;
+    left: 10px;
+    transform: rotate(-90deg);
+}
+#arrowBR {
+    top: 60px;
+    left: 10px;
+    transform: rotate(90deg);
+}
+#arrowBY {
+    top: 30px;
+    left: 45px;
+}
+#arrowYB {
+    top: 30px;
+    left: 45px;
+    transform: rotate(180deg);
+}
+#arrowYG {
+    top: 60px;
+    left: 80px;
+    transform: rotate(90deg);
+}
+#arrowGY {
+    top: 70px;
+    left: 80px;
+    transform: rotate(-90deg);
+}
+#arrowGR {
+    top: 100px;
+    left: 45px;
+    transform: rotate(180deg);
+}
+#arrowRG {
+    top: 100px;
+    left: 45px;
+}
+#arrowRY {
+    top: 66px;
+    left: 44px;
+    transform: rotate(-45deg);
+}
+#arrowYR {
+    top: 66px;
+    left: 44px;
+    transform: rotate(135deg);
+}
+#arrowBG {
+    top: 64px;
+    left: 44px;
+    transform: rotate(45deg);
+}
+#arrowGB {
+    top: 64px;
+    left: 44px;
+    transform: rotate(-135deg);
+}

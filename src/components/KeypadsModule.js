@@ -114,10 +114,6 @@ export default class KeypadsModule extends KtaneModule {
     )
   }
 
-  resetState() {
-    this.setState(this.getInitialState());
-  }
-
   toggleHighlight(event) {
     this.keyColumnMap = this.keyColumnMap || this.computeKeyColumnMap();
 
