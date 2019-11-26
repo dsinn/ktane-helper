@@ -41,54 +41,6 @@ $('section').each(function () {
 
 (function () {
     /**
-     * Keypads
-     */
-    var columns = [
-        ['balloon', 'at', 'upsidedowny', 'squigglyn', 'squidknife', 'hookn', 'leftc'],
-        ['euro', 'balloon', 'leftc', 'cursive', 'hollowstar', 'hookn', 'questionmark'],
-        ['copyright', 'pumpkin', 'cursive', 'doublek', 'meltedthree', 'upsidedowny', 'hollowstar'],
-        ['six', 'paragraph', 'bt', 'squidknife', 'doublek', 'questionmark', 'smileyface'],
-        ['pitchfork', 'smileyface', 'bt', 'rightc', 'paragraph', 'dragon', 'filledstar'],
-        ['six', 'euro', 'tracks', 'ae', 'pitchfork', 'nwithhat', 'omega']
-    ],
-        $section = $('#sectionKeypads'),
-        $imageLists = {}; // name -> $('<img />')[]
-
-    $.each(columns, function (i, column) {
-        var $column = $('<ul data-count="0"></ul>');
-        $section.append($column);
-
-        $.each(column, function (i, name) {
-            var $img = $('<img data-name="' + name + '" src="keypads/' + name + '.png" width="64" height="64" />');
-            $column.append($('<li></li>').append($img));
-
-            name in $imageLists
-                ? $imageLists[name].push($img)
-                : $imageLists[name] = [$img];
-        });
-    });
-
-    $section.on('click', 'img', function () {
-        var $img = $(this),
-            name = $img.data('name'),
-            endState = !$img.hasClass('selected'),
-            offset = endState ? 1 : -1;
-
-        $.each($imageLists[name], function (i, $img) {
-            var $column = $img.parent().parent();
-            $img.toggleClass('selected', endState);
-            $column.attr('data-count', parseInt($column.attr('data-count'), 10) + offset);
-        });
-    });
-
-    $section.find('.jsResetSection').on('click', function () {
-        // Also need to reset the indices after removing .selected
-        $section.find('ul').attr('data-count', 0);
-    });
-})();
-
-(function () {
-    /**
      * Simon
      */
     var $checkbox = $('#simonVowel'),

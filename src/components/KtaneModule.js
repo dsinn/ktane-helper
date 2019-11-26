@@ -5,7 +5,13 @@ class KtaneModule extends Component {
   constructor(props) {
     super(props);
 
-    this.resetState();
+    this.state = this.getInitialState();
+
+    this.resetState = this.resetState.bind(this);
+  }
+
+  getInitialState() {
+    throw new Error("getInitialState() not implemented.");
   }
 
   getTitle() {
@@ -27,7 +33,7 @@ class KtaneModule extends Component {
   }
 
   resetState() {
-    throw new Error("mainRender() not implemented.");
+    this.setState(this.getInitialState());
   }
 }
 
