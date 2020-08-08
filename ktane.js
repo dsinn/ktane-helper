@@ -359,7 +359,7 @@ $('section').each(function () {
     });
 
     $('#wofInput').on('keyup', function () {
-        var value = this.value.replace(/^ +| +|[^A-Za-z']$/, '').toUpperCase();
+        var value = this.value.replace(/^ +|[^a-z ']$/i, '').toUpperCase();
         this.value = value;
 
         $.each($displays, function (word, $dt) {
