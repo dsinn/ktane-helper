@@ -161,7 +161,7 @@ export default class WiresModule extends KtaneModule {
           }
         </ul>
 
-        <ul className="wireList">
+        <ol className="wireList">
           {
             this.state.wires.map((wire, index) => (
               <li className={`${wire.shouldCut ? "wireToCut" : ""} ${wire.cutFlags.join(" ")}`} key={index}>
@@ -169,7 +169,7 @@ export default class WiresModule extends KtaneModule {
               </li>
             ))
           }
-        </ul>
+        </ol>
       </>
     )
   }

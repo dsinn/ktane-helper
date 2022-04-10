@@ -11,8 +11,13 @@
 #wireList {
     list-style-type: decimal;
 }
+.wireToCut {
+    position: relative;
+}
 .wireToCut:after {
     color: green;
+    position: absolute;
+    top: 0.3em;
 }
 .wireToCut:after, .wireToCut.odd.even:after {
     content: '\27fd';
