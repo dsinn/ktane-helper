@@ -155,7 +155,12 @@ export default class WiresModule extends KtaneModule {
           {
             this.allColours.map(colour => (
               <li className="wireOptions__item" key={`option_${colour}`}>
-                <button className={`button ${colour}`} data-colour={colour} onClick={this.addWire} />
+                <button
+                  aria-label={colour}
+                  className={`button ${colour}`}
+                  data-colour={colour}
+                  onClick={this.addWire}
+                />
               </li>
             ))
           }
@@ -165,7 +170,12 @@ export default class WiresModule extends KtaneModule {
           {
             this.state.wires.map((wire, index) => (
               <li className={`${wire.shouldCut ? "wireToCut" : ""} ${wire.cutFlags.join(" ")}`} key={index}>
-                <button className={`button ${wire.colour}`} data-index={index} onClick={this.deleteWires} />
+                <button
+                  aria-label={wire.colour}
+                  className={`button ${wire.colour}`}
+                  data-index={index}
+                  onClick={this.deleteWires}
+                />
               </li>
             ))
           }
