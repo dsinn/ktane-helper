@@ -1,0 +1,34 @@
+dl, table {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+.collapsed dl, .collapsed table {
+    display: none;
+}
+dl {
+    margin-right: 4em;
+}
+dt {
+    background-color: black;
+    clear: left;
+    color: white;
+    margin-right: 1em;
+    text-align: center;
+    width: 6em;
+}
+dd {
+    margin-bottom: 0.4em;
+    margin-left: 0;
+}
+dt, dd {
+    float: left;
+}
+dt.inactive + dd {
+    opacity: 0;
+}
+table {
+    margin-left: 0.5em;
+}
+th {
+    border: 1px solid black;
+}
