@@ -3,6 +3,7 @@ import './App.css';
 import ButtonModule from "./components/ButtonModule";
 import KeypadsModule from "./components/KeypadsModule";
 import SimonSaysModule from "./components/SimonSaysModule";
+import WhosOnFirstModule from "./components/WhosOnFirstModule";
 import WiresModule from "./components/WiresModule";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <ButtonModule id="sectionButton" />
       <KeypadsModule id="sectionKeypads" />
       <SimonSaysModule id="sectionSimon" />
+      <WhosOnFirstModule id="sectionWhosOnFirst" />
     </div>
   );
 }
