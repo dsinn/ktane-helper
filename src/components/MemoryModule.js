@@ -4,6 +4,10 @@ import ResetButton from "./ResetButton";
 import "../css/MemoryModule.css";
 
 export default class MemoryModule extends KtaneModule {
+  static getTitle() {
+    return "Memory";
+  }
+
   constructor(props) {
     super(props);
 
@@ -62,10 +66,6 @@ export default class MemoryModule extends KtaneModule {
 
   getResetFocusElement() {
     return this.tbodyRef.current.querySelector(`tr[data-index="0"] input[data-column="${this.D}"]`);
-  }
-
-  getTitle() {
-    return "Memory";
   }
 
   mainRender() {

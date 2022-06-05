@@ -3,6 +3,10 @@ import React from "react";
 import "../css/WhosOnFirstModule.css";
 
 export default class WhosOnFirstModule extends KtaneModule {
+  static getTitle() {
+    return "Who\u2019s On First?";
+  }
+
   constructor(props) {
     super(props);
 
@@ -84,10 +88,6 @@ export default class WhosOnFirstModule extends KtaneModule {
     return {
       substring: ""
     };
-  }
-
-  getTitle() {
-    return "Who\u2019s On First?";
   }
 
   mainRender() {

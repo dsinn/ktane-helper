@@ -3,6 +3,10 @@ import React from "react";
 import "../css/SimonSaysModule.css";
 
 export default class SimonSaysModule extends KtaneModule {
+  static getTitle() {
+    return "Simon Says";
+  }
+
   constructor(props) {
     super(props);
 
@@ -30,10 +34,6 @@ export default class SimonSaysModule extends KtaneModule {
       hasVowel: false,
       strikes: 0
     };
-  }
-
-  getTitle() {
-    return "Simon Says";
   }
 
   mainRender() {
