@@ -1,0 +1,10 @@
+#sectionMemory table {
+    margin-top: 1em;
+}
+#sectionMemory td {
+    text-align: right;
+}
+#sectionMemory input {
+    text-align: center;
+    width: 5em;
+}

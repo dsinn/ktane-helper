@@ -5,6 +5,7 @@ import KeypadsModule from "./components/KeypadsModule";
 import SimonSaysModule from "./components/SimonSaysModule";
 import WhosOnFirstModule from "./components/WhosOnFirstModule";
 import WiresModule from "./components/WiresModule";
+import MemoryModule from "./components/MemoryModule";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <KeypadsModule id="sectionKeypads" />
       <SimonSaysModule id="sectionSimon" />
       <WhosOnFirstModule id="sectionWhosOnFirst" />
+      <MemoryModule id="sectionMemory" />
     </div>
   );
 }

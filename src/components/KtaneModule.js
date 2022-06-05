@@ -14,6 +14,10 @@ class KtaneModule extends Component {
     throw new Error("getInitialState() not implemented.");
   }
 
+  getResetFocusElement() {
+    return null;
+  }
+
   getTitle() {
     throw new Error("getTitle() not implemented.");
   }
@@ -34,6 +38,7 @@ class KtaneModule extends Component {
 
   resetState() {
     this.setState(this.getInitialState());
+    this.getResetFocusElement()?.focus();
   }
 }
 
