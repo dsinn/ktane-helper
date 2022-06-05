@@ -127,6 +127,6 @@ export default class WhosOnFirstModule extends KtaneModule {
   }
 
   setSubstring(event) {
-    this.setState({substring: event.currentTarget.value.trim().toUpperCase()});
+    this.setState({substring: event.currentTarget.value.toUpperCase()});
   }
 }
