@@ -3,6 +3,9 @@ import React from "react";
 import "../css/WiresModule.css";
 
 export default class WiresModule extends KtaneModule {
+  static getTitle() {
+    return "Wires";
+  }
 
   constructor(props) {
     super(props);
@@ -142,10 +145,6 @@ export default class WiresModule extends KtaneModule {
       }
     }
     return -1;
-  }
-
-  getTitle() {
-    return "Wires";
   }
 
   mainRender() {

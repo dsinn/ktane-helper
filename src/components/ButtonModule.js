@@ -5,6 +5,10 @@ import React from "react";
 import "../css/ButtonModule.css";
 
 export default class ButtonModule extends KtaneModule {
+  static getTitle() {
+    return "Button";
+  }
+
   constructor(props) {
     super(props);
 
@@ -43,10 +47,6 @@ export default class ButtonModule extends KtaneModule {
         <br />Otherwise, hold button.
       </>;
     }
-  }
-
-  getTitle() {
-    return "Button";
   }
 
   mainRender() {

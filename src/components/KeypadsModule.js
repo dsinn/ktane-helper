@@ -4,6 +4,10 @@ import ResetButton from "./ResetButton";
 import "../css/KeypadsModule.css";
 
 export default class KeypadsModule extends KtaneModule {
+  static getTitle() {
+    return "Keypads";
+  }
+
   constructor(props) {
     super(props);
 
@@ -80,10 +84,6 @@ export default class KeypadsModule extends KtaneModule {
         upsidedowny: false
       }
     };
-  }
-
-  getTitle() {
-    return "Keypads";
   }
 
   mainRender() {
