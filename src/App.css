@@ -108,56 +108,6 @@ nav {
     padding: 0.1em 0.5em;
 }
 
-#sectionWof {
-    white-space: nowrap;
-}
-#sectionWof dl, #sectionWof table {
-    display: inline-block;
-    margin-bottom: 1em;
-}
-#sectionWof.collapsed dl, #sectionWof.collapsed table {
-    display: none;
-}
-#sectionWof dl {
-    margin-right: 4em;
-}
-#sectionWof dt {
-    background-color: black;
-    clear: left;
-    color: white;
-    margin-right: 1em;
-    text-align: center;
-    width: 6em;
-}
-#sectionWof dd {
-    margin-bottom: 0.4em;
-    margin-left: 0;
-}
-#sectionWof dt, #sectionWof dd {
-    display: inline-block;
-    float: left;
-}
-#sectionWof dt.inactive + dd {
-    opacity: 0;
-}
-#sectionWof table {
-    margin-left: 0.5em;
-}
-#sectionWof th {
-    border: 1px solid black;
-}
-
-#sectionMemory table {
-    margin-top: 1em;
-}
-#sectionMemory td {
-    text-align: right;
-}
-#sectionMemory input {
-    text-align: center;
-    width: 5em;
-}
-
 #sectionMorse table {
     float: left;
     margin-bottom: 1em;

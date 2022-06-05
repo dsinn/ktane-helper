@@ -1,14 +1,14 @@
-dl, table {
+#sectionWhosOnFirst dl, #sectionWhosOnFirst  table {
     display: inline-block;
     margin-bottom: 1em;
 }
 .collapsed dl, .collapsed table {
     display: none;
 }
-dl {
+#sectionWhosOnFirst dl {
     margin-right: 4em;
 }
-dt {
+#sectionWhosOnFirst dt {
     background-color: black;
     clear: left;
     color: white;
@@ -16,19 +16,19 @@ dt {
     text-align: center;
     width: 6em;
 }
-dd {
+#sectionWhosOnFirst dd {
     margin-bottom: 0.4em;
     margin-left: 0;
 }
-dt, dd {
+#sectionWhosOnFirst dt, #sectionWhosOnFirst  dd {
     float: left;
 }
-dt.inactive + dd {
+#sectionWhosOnFirst dt.inactive + dd {
     opacity: 0;
 }
-table {
+#sectionWhosOnFirst  table {
     margin-left: 0.5em;
 }
-th {
+#sectionWhosOnFirst th {
     border: 1px solid black;
 }
