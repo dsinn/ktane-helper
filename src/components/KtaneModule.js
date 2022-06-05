@@ -2,6 +2,10 @@ import PropTypes from "prop-types";
 import React, {Component} from "react";
 
 class KtaneModule extends Component {
+  static getTitle() {
+    throw new Error("getTitle() not implemented.");
+  }
+
   constructor(props) {
     super(props);
 
@@ -18,10 +22,6 @@ class KtaneModule extends Component {
     return null;
   }
 
-  getTitle() {
-    throw new Error("getTitle() not implemented.");
-  }
-
   mainRender() {
     throw new Error("mainRender() not implemented.");
   }
@@ -29,7 +29,7 @@ class KtaneModule extends Component {
   render() {
     return (
       <section id={this.props.id}>
-        <h2>{this.getTitle()}</h2>
+        <h2>{this.constructor.getTitle()}</h2>
 
         {this.mainRender()}
       </section>
