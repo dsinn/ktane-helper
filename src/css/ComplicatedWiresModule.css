@@ -1,5 +1,6 @@
 #sectionComplicatedWires td {
-    height: 1.5em;
+    height: 2em;
     text-align: center;
-    width: 1em;
+    padding: 0;
+    width: 2em;
 }
