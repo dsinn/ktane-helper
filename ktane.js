@@ -30,46 +30,6 @@ $('.jsResetSection').on('click', function () {
 
 (function () {
     /**
-     * Wire sequence
-     */
-    var $instructions = $('#sequenceInstruction'),
-        count = {
-            red: 0,
-            blue: 0,
-            black: 0
-        },
-        occurrences = {
-            red: ['C', 'B', 'A', 'AC', 'B', 'AC', 'ABC', 'AB', 'B'],
-            blue: ['B', 'AC', 'B', 'A', 'B', 'BC', 'C', 'AC', 'A'],
-            black: ['ABC', 'AC', 'B', 'AC', 'B', 'BC', 'AB', 'C', 'C']
-        };
-
-    $('#sequenceOptions button').on('click', function () {
-        var colour = this.getAttribute('data-colour'),
-                letter = this.getAttribute('data-letter'),
-                $li = $('<li><button class="button ' + colour + '" data-colour="' + colour + '" data-letter="' + letter
-                        + '">' + letter + '</button></li>');
-
-        if (typeof occurrences[colour][count[colour]] !== 'undefined') {
-            $li.append(occurrences[colour][count[colour]].indexOf(letter) === -1 ? 'Ignore' : 'Cut');
-            count[colour]++;
-            $instructions.append($li);
-        }
-    });
-
-    $instructions.on('click', 'button', function () {
-        var deleteIndex = $(this).parent().index();
-
-        $instructions.children('li:eq(' + deleteIndex + '), li:gt(' + deleteIndex + ')').each(function () {
-            var button = this.firstChild;
-            count[button.getAttribute('data-colour')]--;
-            $(this).remove();
-        });
-    });
-})();
-
-(function () {
-    /**
      * Venn diagram
      */
     var instructions = {

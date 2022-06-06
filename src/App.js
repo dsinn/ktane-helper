@@ -7,6 +7,7 @@ import WhosOnFirstModule from "./components/WhosOnFirstModule";
 import WiresModule from "./components/WiresModule";
 import MemoryModule from "./components/MemoryModule";
 import MorseModule from './components/MorseModule';
+import WireSequencesModule from './components/WireSequencesModule';
 
 function App() {
   const modules = {
@@ -16,7 +17,8 @@ function App() {
     sectionSimon: SimonSaysModule,
     sectionWhosOnFirst: WhosOnFirstModule,
     sectionMemory: MemoryModule,
-    sectionMorse: MorseModule
+    sectionMorse: MorseModule,
+    sectionWireSequences: WireSequencesModule
   };
 
   return (
