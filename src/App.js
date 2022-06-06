@@ -8,6 +8,7 @@ import WiresModule from "./components/WiresModule";
 import MemoryModule from "./components/MemoryModule";
 import MorseCodeModule from './components/MorseCodeModule';
 import WireSequencesModule from './components/WireSequencesModule';
+import ComplicatedWiresModule from './components/ComplicatedWiresModule';
 
 function App() {
   const modules = {
@@ -18,7 +19,8 @@ function App() {
     sectionWhosOnFirst: WhosOnFirstModule,
     sectionMemory: MemoryModule,
     sectionMorseCode: MorseCodeModule,
-    sectionWireSequences: WireSequencesModule
+    sectionWireSequences: WireSequencesModule,
+    sectionComplicatedWires: ComplicatedWiresModule
   };
 
   return (

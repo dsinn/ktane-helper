@@ -71,6 +71,25 @@ button {
     border: 1px solid black;
 }
 
+.marked {
+    position: relative;
+}
+.marked:after {
+    color: green;
+    font-size: 18pt;
+    position: absolute;
+}
+.marked:after, .marked.odd.even:after {
+    content: '\27fd';
+}
+.marked.odd:after {
+    content: '\27fd\a0 odd';
+}
+.marked.even:after {
+    content: '\27fd\a0 even';
+}
+
+
 section .active { /* ugh, specificity */
     opacity: 1;
 }
@@ -106,9 +125,4 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0.1em 0.5em;
-}
-
-#sectionVenn2 td {
-    height: 1.5em;
-    width: 1em;
 }
