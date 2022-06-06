@@ -6,7 +6,7 @@ import SimonSaysModule from "./components/SimonSaysModule";
 import WhosOnFirstModule from "./components/WhosOnFirstModule";
 import WiresModule from "./components/WiresModule";
 import MemoryModule from "./components/MemoryModule";
-import MorseModule from './components/MorseModule';
+import MorseCodeModule from './components/MorseCodeModule';
 import WireSequencesModule from './components/WireSequencesModule';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     sectionSimon: SimonSaysModule,
     sectionWhosOnFirst: WhosOnFirstModule,
     sectionMemory: MemoryModule,
-    sectionMorse: MorseModule,
+    sectionMorseCode: MorseCodeModule,
     sectionWireSequences: WireSequencesModule
   };
 
