@@ -28,7 +28,7 @@ export default class PasswordsModule extends KtaneModule {
   }
 
   computeRegex() {
-    return new RegExp(`^${this.state.columns.map(letters => letters ? `[${letters}]` : '.').join('')}\$`);
+    return new RegExp(`^${this.state.columns.map(letters => letters ? `[${letters}]` : '.').join('')}$`);
   }
 
   getInitialState() {
