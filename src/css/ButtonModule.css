@@ -11,3 +11,20 @@
 #sectionButton label {
     margin-left: 1em;
 }
+
+.bigButton {
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 69px;
+    position: relative;
+    text-align: center;
+    width: 69px;
+}
+.bigButton span {
+    font-family: 'Arial', 'sans-serif';
+    font-size: 16px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}

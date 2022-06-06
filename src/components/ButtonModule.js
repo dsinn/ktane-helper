@@ -52,6 +52,12 @@ export default class ButtonModule extends KtaneModule {
   mainRender() {
     return (
       <>
+        <div className="bigButton" style={{backgroundColor: this.state.colour}}>
+          <span style={{color: [this.colourWhite, this.colourYellow].includes(this.state.colour) ? "black" : "white"}}>
+            {this.state.text}
+          </span>
+        </div>
+
         <div>
           Colour:
           {
