@@ -93,7 +93,14 @@ export default class WhosOnFirstModule extends KtaneModule {
   mainRender() {
     return (
       <>
-        <div><input type="text" value={this.state.substring} onChange={this.setSubstring} /></div>
+        <div>
+          <input
+            aria-label={`${this.constructor.getTitle()} query`}
+            onChange={this.setSubstring}
+            type="text"
+            value={this.state.substring}
+          />
+        </div>
 
         <dl>
           {

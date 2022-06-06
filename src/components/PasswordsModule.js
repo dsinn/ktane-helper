@@ -50,7 +50,13 @@ export default class PasswordsModule extends KtaneModule {
           {
             this.state.columns.map((letters, index) => (
               <li key={index}>
-                <input type="text" data-index={index} onChange={this.setColumn} value={letters} />
+                <input
+                  aria-label={`Column ${index + 1} letters`}
+                  data-index={index}
+                  onChange={this.setColumn}
+                  type="text"
+                  value={letters}
+                />
               </li>
             ))
           }
