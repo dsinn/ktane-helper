@@ -168,7 +168,7 @@ export default class WiresModule extends KtaneModule {
         <ol className="wireList">
           {
             this.state.wires.map((wire, index) => (
-              <li className={`${wire.shouldCut ? "wireToCut" : ""} ${wire.cutFlags.join(" ")}`} key={index}>
+              <li className={`${wire.shouldCut ? "marked" : ""} ${wire.cutFlags.join(" ")}`} key={index}>
                 <button
                   aria-label={wire.colour}
                   className={`button ${wire.colour}`}
