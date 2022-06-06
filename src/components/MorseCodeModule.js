@@ -50,7 +50,7 @@ export default class MorseCodeModule extends KtaneModule {
       '-..-': 'x'
     };
     this.codeRegex = new RegExp(
-      ` *(?<![\.-])(${Object.keys(this.codes).join('|').replace(/\./g, '\\.')})(?![\.-]) *`,
+      ` *(?<![.-])(${Object.keys(this.codes).join('|').replace(/\./g, '\\.')})(?![.-]) *`,
       'g'
     );
     this.codeRegexReplacer = (_match, code) => this.codes[code];
