@@ -88,33 +88,20 @@ export default class MemoryModule extends KtaneModule {
                 return (
                   <tr data-index={index} key={`stage${index + 1}`}>
                     <td>{index + 1}</td>
-                    <td>
-                      <input
-                        data-column={this.D}
-                        maxLength="1"
-                        onChange={this.setNumber}
-                        type="text"
-                        value={values.display}
-                      />
-                    </td>
-                    <td>
-                      <input
-                        data-column={this.P}
-                        maxLength="1"
-                        onChange={this.setNumber}
-                        type="text"
-                        value={values.position}
-                      />
-                    </td>
-                    <td>
-                      <input
-                        data-column={this.L}
-                        maxLength="1"
-                        onChange={this.setNumber}
-                        type="text"
-                        value={values.label}
-                      />
-                    </td>
+                    {
+                      [this.D, this.P, this.L].map(column => (
+                        <td key={column}>
+                          <input
+                            aria-label={`Stage ${index + 1} ${column}`}
+                            data-column={column}
+                            maxLength="1"
+                            onChange={this.setNumber}
+                            type="text"
+                            value={values[column]}
+                          />
+                        </td>
+                      ))
+                    }
                   </tr>
                 );
               })
