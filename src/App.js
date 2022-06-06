@@ -9,6 +9,7 @@ import MemoryModule from "./components/MemoryModule";
 import MorseCodeModule from './components/MorseCodeModule';
 import WireSequencesModule from './components/WireSequencesModule';
 import ComplicatedWiresModule from './components/ComplicatedWiresModule';
+import PasswordsModule from './components/PasswordsModule';
 
 function App() {
   const modules = {
@@ -20,7 +21,8 @@ function App() {
     sectionMemory: MemoryModule,
     sectionMorseCode: MorseCodeModule,
     sectionWireSequences: WireSequencesModule,
-    sectionComplicatedWires: ComplicatedWiresModule
+    sectionComplicatedWires: ComplicatedWiresModule,
+    sectionPasswords: PasswordsModule
   };
 
   return (
