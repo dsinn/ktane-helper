@@ -1,0 +1,18 @@
+#sectionWireSequences button {
+    cursor: pointer;
+    width: 2em;
+}
+#sequenceOptions {
+    padding-left: 0;
+    width: 9.5em;
+}
+#sequenceOptions li {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+#sequenceInstruction {
+    list-style-type: decimal;
+}
+#sequenceInstruction button {
+    margin-right: 0.2em;
+}
