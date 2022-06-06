@@ -82,7 +82,12 @@ export default class MorseCodeModule extends KtaneModule {
           </tbody>
         </table>
 
-        <textarea id="morseInput" rows="7" cols="40" onChange={this.setInput}></textarea>
+        <div>
+          <label>
+            <div>Morse code substrings</div>
+            <div><textarea id="morseInput" rows="7" cols="40" onChange={this.setInput}></textarea></div>
+          </label>
+        </div>
       </>
     )
   }
