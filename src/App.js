@@ -1,15 +1,16 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+
 import ButtonModule from "./components/ButtonModule";
+import ComplicatedWiresModule from "./components/ComplicatedWiresModule";
 import KeypadsModule from "./components/KeypadsModule";
+import MemoryModule from "./components/MemoryModule";
+import MorseCodeModule from "./components/MorseCodeModule";
+import PasswordsModule from "./components/PasswordsModule";
 import SimonSaysModule from "./components/SimonSaysModule";
 import WhosOnFirstModule from "./components/WhosOnFirstModule";
 import WiresModule from "./components/WiresModule";
-import MemoryModule from "./components/MemoryModule";
-import MorseCodeModule from './components/MorseCodeModule';
-import WireSequencesModule from './components/WireSequencesModule';
-import ComplicatedWiresModule from './components/ComplicatedWiresModule';
-import PasswordsModule from './components/PasswordsModule';
+import WireSequencesModule from "./components/WireSequencesModule";
 
 function App() {
   const modules = {
