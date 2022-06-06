@@ -1,10 +1,10 @@
 import KtaneModule from "./KtaneModule";
 import React from "react";
-import "../css/MorseModule.css";
+import "../css/MorseCodeModule.css";
 
-export default class MorseModule extends KtaneModule {
+export default class MorseCodeModule extends KtaneModule {
   static getTitle() {
-    return "Morse";
+    return "Morse Code";
   }
 
   constructor(props) {
