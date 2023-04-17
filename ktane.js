@@ -678,7 +678,7 @@ $('section').each(function () {
         ]);
         addRow($doNotCut, [
             {light: true},
-            {blue: true, light: true},
+            {blue: true, star: true},
             {red: true, blue: true, star: true, light: true}
         ]);
         addRow($serialList, [
