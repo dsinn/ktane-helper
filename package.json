@@ -12,8 +12,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest",
+"preview": "vite preview",
+    "test": "vitest run",
     "test:ui": "vitest --ui"
   },
   "browserslist": {
