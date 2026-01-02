@@ -17,7 +17,7 @@ describe('ButtonModule', () => {
 
   it('renders with default blue button and Abort text', () => {
     expect(bigButton).toHaveTextContent('Abort');
-    expect(bigButton).toHaveStyle({ backgroundColor: 'blue' });
+    expect(bigButton).toHaveStyle({ backgroundColor: 'rgb(0, 0, 255)' });
   });
 
   it('renders all colour options', () => {
@@ -38,7 +38,7 @@ describe('ButtonModule', () => {
     const redRadio = container.querySelector('input[value="red"]');
     await user.click(redRadio);
 
-    expect(bigButton).toHaveStyle({ backgroundColor: 'red' });
+    expect(bigButton).toHaveStyle({ backgroundColor: 'rgb(255, 0, 0)' });
   });
 
   it('changes button text when selecting different text', async () => {
@@ -77,11 +77,11 @@ describe('ButtonModule', () => {
     await user.click(container.querySelector('input[value="white"]'));
 
     const buttonText = bigButton.querySelector('span');
-    expect(buttonText).toHaveStyle({ color: 'black' });
+    expect(buttonText).toHaveStyle({ color: 'rgb(0, 0, 0)' });
   });
 
   it('applies correct text colour for blue button', () => {
     const buttonText = bigButton.querySelector('span');
-    expect(buttonText).toHaveStyle({ color: 'white' });
+    expect(buttonText).toHaveStyle({ color: 'rgb(255, 255, 255)' });
   });
 });
