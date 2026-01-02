@@ -1,22 +1,20 @@
 {
   "name": "ktane-helper",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "type": "module",
   "homepage": ".",
   "private": true,
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.1"
+    "react-dom": "^18.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "start": "vite",
+    "build": "vite build",
+"preview": "vite preview",
+    "test": "vitest run",
+    "test:ui": "vitest --ui"
   },
   "browserslist": {
     "production": [
@@ -31,9 +29,13 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
-    "@testing-library/user-event": "^14.6.1"
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitest/ui": "^4.0.16",
+    "jsdom": "^27.4.0",
+    "vite": "^7.3.0",
+    "vitest": "^4.0.16"
   }
 }
