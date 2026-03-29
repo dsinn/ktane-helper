@@ -96,20 +96,4 @@ export default class WireSequencesModule extends KtaneModule {
     this.setState({counts, wires});
   }
 
-  setInput(event) {
-    const lines = event.currentTarget.value.split('\n');
-    const regexes = lines.filter(Boolean).map(
-      line => {
-        const transformedRegex = line.replace(this.codeRegex, this.codeRegexReplacer).replace(/ /g, '');
-        try {
-          return new RegExp(transformedRegex);
-        } catch (error) {
-          console.log(`Morse module line "${line}" was transformed to the invalid regex: ${transformedRegex}`);
-          return null;
-        }
-      }
-    );
-
-    this.setState({input: event.currentTarget.value, regexes: regexes.filter(Boolean)});
-  }
 }

@@ -9,8 +9,7 @@ describe('WhosOnFirstModule', () => {
 
   beforeEach(() => {
     user = userEvent.setup();
-    const result = render(<WhosOnFirstModule />);
-    container = result.container;
+    ({ container } = render(<WhosOnFirstModule />));
   });
 
   it('renders search input field', () => {
@@ -126,7 +125,6 @@ describe('WhosOnFirstModule', () => {
   });
 
   it('handles special display word with non-breaking space', async () => {
-    const nonBreakingSpace = '\u00a0';
     const nbspDt = container.querySelector(`dt:not(.inactive)`);
 
     expect(nbspDt).toBeInTheDocument();

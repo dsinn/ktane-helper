@@ -81,7 +81,7 @@ export default class SimonSaysModule extends KtaneModule {
     this.setState({strikes: parseInt(event.currentTarget.value, 10)})
   }
 
-  toggleVowel(event) {
+  toggleVowel() {
     this.setState(state => ({hasVowel: !state.hasVowel}));
   }
 }

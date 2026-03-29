@@ -121,7 +121,7 @@ export default class WhosOnFirstModule extends KtaneModule {
             Object.entries(this.sequences).map(([button, sequence]) => {
               return <React.Fragment key={button}>
                 <tr className={!this.state.substring || button.startsWith(this.state.substring) ? '' : 'inactive'}>
-                  <th>"{button}":</th>
+                  <th>&quot;{button}&quot;:</th>
                   <td>{sequence}</td>
                 </tr>
               </React.Fragment>;
