@@ -7,8 +7,14 @@
 #sectionKeypads li {
     border: 1px solid black;
     border-bottom: 0;
-    cursor: pointer;
     line-height: 0;
+}
+#sectionKeypads li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 0;
 }
 #sectionKeypads li:last-child {
     border-bottom: 1px solid black;

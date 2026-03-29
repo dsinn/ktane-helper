@@ -4,13 +4,11 @@ import userEvent from '@testing-library/user-event';
 import KeypadsModule from './KeypadsModule';
 
 describe('KeypadsModule', () => {
-  let container;
   let user;
 
   beforeEach(() => {
     user = userEvent.setup();
-    const result = render(<KeypadsModule />);
-    container = result.container;
+    render(<KeypadsModule />);
   });
 
   it('renders reset button', () => {
@@ -41,7 +39,7 @@ describe('KeypadsModule', () => {
 
     expect(listItem).not.toHaveClass('selected');
 
-    await user.click(listItem);
+    await user.click(balloons[0].closest('button'));
 
     expect(listItem).toHaveClass('selected');
   });
@@ -49,11 +47,12 @@ describe('KeypadsModule', () => {
   it('unhighlights a symbol when clicked again', async () => {
     const balloons = screen.getAllByAltText('balloon');
     const listItem = balloons[0].closest('li');
+    const button = balloons[0].closest('button');
 
-    await user.click(listItem);
+    await user.click(button);
     expect(listItem).toHaveClass('selected');
 
-    await user.click(listItem);
+    await user.click(button);
     expect(listItem).not.toHaveClass('selected');
   });
 
@@ -61,21 +60,21 @@ describe('KeypadsModule', () => {
     const lists = screen.getAllByRole('list');
     const firstColumn = lists[0];
 
-    const symbols = Array.from(firstColumn.querySelectorAll('li'));
-    await user.click(symbols[0]);
-    await user.click(symbols[1]);
-    await user.click(symbols[2]);
+    const buttons = Array.from(firstColumn.querySelectorAll('button'));
+    await user.click(buttons[0]);
+    await user.click(buttons[1]);
+    await user.click(buttons[2]);
 
     expect(firstColumn).not.toHaveClass('matching');
 
-    await user.click(symbols[3]);
+    await user.click(buttons[3]);
 
     expect(firstColumn).toHaveClass('matching');
   });
 
   it('updates multiple columns when selecting symbols that appear in multiple columns', async () => {
     const balloons = screen.getAllByAltText('balloon');
-    await user.click(balloons[0].closest('li'));
+    await user.click(balloons[0].closest('button'));
 
     const lists = screen.getAllByRole('list');
     expect(lists[0].querySelector('.selected')).toBeInTheDocument();
@@ -84,7 +83,7 @@ describe('KeypadsModule', () => {
 
   it('resets state when reset button is clicked', async () => {
     const balloons = screen.getAllByAltText('balloon');
-    await user.click(balloons[0].closest('li'));
+    await user.click(balloons[0].closest('button'));
 
     expect(balloons[0].closest('li')).toHaveClass('selected');
 
@@ -97,12 +96,12 @@ describe('KeypadsModule', () => {
   it('removes matching class when resetting', async () => {
     const lists = screen.getAllByRole('list');
     const firstColumn = lists[0];
-    const symbols = Array.from(firstColumn.querySelectorAll('li'));
+    const buttons = Array.from(firstColumn.querySelectorAll('button'));
 
-    await user.click(symbols[0]);
-    await user.click(symbols[1]);
-    await user.click(symbols[2]);
-    await user.click(symbols[3]);
+    await user.click(buttons[0]);
+    await user.click(buttons[1]);
+    await user.click(buttons[2]);
+    await user.click(buttons[3]);
 
     expect(firstColumn).toHaveClass('matching');
 
@@ -114,16 +113,18 @@ describe('KeypadsModule', () => {
 
   it('handles selecting and deselecting symbols across columns', async () => {
     const hookns = screen.getAllByAltText('hookn');
-    await user.click(hookns[0].closest('li'));
+    const button = hookns[0].closest('button');
 
     const lists = screen.getAllByRole('list');
     const columnsWithHookn = [lists[0], lists[1]];
+
+    await user.click(button);
 
     columnsWithHookn.forEach(column => {
       expect(column.querySelector('.selected')).toBeInTheDocument();
     });
 
-    await user.click(hookns[0].closest('li'));
+    await user.click(button);
 
     columnsWithHookn.forEach(column => {
       expect(column.querySelector('.selected')).not.toBeInTheDocument();

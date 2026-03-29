@@ -60,7 +60,7 @@ export default class MemoryModule extends KtaneModule {
 
   getInitialState() {
     return {
-      stages: [...Array(5).keys()].map(_ => ({display: '', position: '', label: ''}))
+      stages: Array(5).fill(null).map(() => ({display: '', position: '', label: ''}))
     };
   }
 

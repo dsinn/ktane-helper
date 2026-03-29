@@ -106,7 +106,7 @@ export default class MorseCodeModule extends KtaneModule {
         const transformedRegex = line.replace(this.codeRegex, this.codeRegexReplacer).replace(/ /g, '');
         try {
           return new RegExp(transformedRegex);
-        } catch (error) {
+        } catch {
           console.log(`Morse module line "${line}" was transformed to the invalid regex: ${transformedRegex}`);
           return null;
         }

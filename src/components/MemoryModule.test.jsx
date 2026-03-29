@@ -4,13 +4,11 @@ import userEvent from '@testing-library/user-event';
 import MemoryModule from './MemoryModule';
 
 describe('MemoryModule', () => {
-  let container;
   let user;
 
   beforeEach(() => {
     user = userEvent.setup();
-    const result = render(<MemoryModule />);
-    container = result.container;
+    render(<MemoryModule />);
   });
 
   it('renders reset button', () => {
@@ -127,7 +125,6 @@ describe('MemoryModule', () => {
 
   it('handles stage 2 logic based on stage 1 data', async () => {
     const stage1Display = screen.getByLabelText('Stage 1 display');
-    const stage1Position = screen.getByLabelText('Stage 1 position');
     const stage1Label = screen.getByLabelText('Stage 1 label');
 
     await user.type(stage1Display, '1');

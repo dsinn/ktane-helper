@@ -20,7 +20,7 @@ export default class KeypadsModule extends KtaneModule {
 
     this.state.columns.forEach((column, index) => {
       column.keys.forEach(key => {
-        if (!map.hasOwnProperty(key)) {
+        if (!Object.prototype.hasOwnProperty.call(map, key)) {
           map[key] = [];
         }
         map[key].push(index);
@@ -98,11 +98,15 @@ export default class KeypadsModule extends KtaneModule {
                   return (
                     <li
                       className={this.state.highlights[key] ? "selected" : ""}
-                      data-key={key}
                       key={key}
-                      onClick={this.toggleHighlight}
                     >
-                      <img alt={key} height="64" width="64" src={`keypads/${key}.png`}/>
+                      <button
+                        data-key={key}
+                        onClick={this.toggleHighlight}
+                        type="button"
+                      >
+                        <img alt={key} height="64" width="64" src={`keypads/${key}.png`}/>
+                      </button>
                     </li>
                   );
                 })
